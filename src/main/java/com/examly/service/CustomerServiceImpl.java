@@ -13,35 +13,44 @@ import com.examly.util.DBConnectionUtil;
 public class CustomerServiceImpl implements CustomerService {
     @Override
     public boolean createCustomer (Customer customer) throws EmailAlreadyRegisteredException {
+        
         //  String deleteQuery = "DELETE FROM customer WHERE email = ?";
+        
         String checkEmailSql = "SELECT COUNT(*) FROM customer WHERE email = ?";
         String expectedQuery = "INSERT INTO customer (name, email, phoneNumber, password) VALUES (?, ?, ?, ?)" ;
         try(Connection conn =DBConnectionUtil.getConnection();
             PreparedStatement checkStmt = conn.prepareStatement(checkEmailSql);
             PreparedStatement insertStmt = conn.prepareStatement(expectedQuery)){
+
+            checkStmt.setString(1, customer.getEmail());
+            ResultSet rs = checkStmt.executeQuery();
             
-                String baseEmail =customer.getEmail();
-                String newEmail = baseEmail;
-                int suffix = 1 ;
-                while (true) {
-                    checkStmt.setString(1, newEmail);
-                    ResultSet rs = checkStmt.executeQuery();
-                if(rs.next() && rs.getInt(1) == 0){
-                    // throw new EmailAlreadyRegisteredException("Email"+customer.getEmail() + " is already registered");
-                    break;
+            // String baseEmail =customer.getEmail();
+            // String newEmail = baseEmail;
+            // int suffix = 1 ;
+            // while (true) {
+            // checkStmt.setString(1, newEmail);
+            // ResultSet rs = checkStmt.executeQuery();
+
+            
+                if(rs.next() && rs.getInt(1) > 0){
+                     throw new EmailAlreadyRegisteredException("Email"+customer.getEmail() + " is already registered");
+                    // break;
                 }
-                int atIndex = baseEmail.indexOf("@");
-                if(atIndex >0){
-                    String local =baseEmail.substring(0, atIndex);
-                    String domain = baseEmail.substring(atIndex);
-                    newEmail=local + "+" +suffix +domain;
-                    suffix++;
-                }
-                else{
-                    throw new EmailAlreadyRegisteredException("Invalid email" + baseEmail);
-                }
-            }
-            customer.setEmail(newEmail);
+            
+            //     int atIndex = baseEmail.indexOf("@");
+            //     if(atIndex >0){
+            //         String local =baseEmail.substring(0, atIndex);
+            //         String domain = baseEmail.substring(atIndex);
+            //         newEmail=local + "+" +suffix +domain;
+            //         suffix++;
+            //     }
+            //     else{
+            //         throw new EmailAlreadyRegisteredException("Invalid email" + baseEmail);
+            //     }
+            // }
+            // customer.setEmail(newEmail);
+            
                 insertStmt.setString(1, customer.getName());
                 insertStmt.setString(2, customer.getEmail());
                 insertStmt.setString(3, customer.getphoneNumber());
