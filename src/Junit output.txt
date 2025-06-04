@@ -171,4 +171,4 @@ CleanupTest: Cleanup executed before AppTest.
 [INFO] ------------------------------------------------------------------------
 [INFO] Total time:  1.423 s
 [INFO] Finished at: 2025-05-31T08:41:16Z
-[INFO] ------------                               -------------------                               -------------------                               refire-plugin:3.0.0                               -M7:test (default-t
+[INFO] ------------                               -------------------                               -------------------                               refire-plugin:3.0.0                              -M7:test (default-t
