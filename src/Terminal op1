@@ -1,0 +1,221 @@
+coder@dedfaafcaf326900158dabecdccdone-0:~/project/workspace$  cd /home/coder/project/workspace ; /usr/bin/env /usr/lib/jvm/java-17-openjdk-amd64/bin/java @/tmp/cp_50y23su4rh52nkjj8kdnncha5.argfile com.examly.MainModule 
+
+=== Welcome to the Online Food Delivery System ===
+1. Register Customer
+2. Create Restaurant
+3. Create Menu Item
+4. View Restaurants
+5. Place Order
+6. View Orders
+7. Make Payment
+8. Exit
+Choose an option: 1
+Enter customer name: John
+Enter customer email: john123@gmail.com
+Enter customer phone number: 9876547890
+Enter customer password: John@123
+Customer registered successfully!
+
+=== Welcome to the Online Food Delivery System ===
+1. Register Customer
+2. Create Restaurant
+3. Create Menu Item
+4. View Restaurants
+5. Place Order
+6. View Orders
+7. Make Payment
+8. Exit
+Choose an option: 2
+Enter restaurant name: Le Meridian
+Enter restaurant address: Covai
+Enter cuisine type: Continental
+Enter contact number: 7895649876
+Restaurant created successfully!
+
+=== Welcome to the Online Food Delivery System ===
+1. Register Customer
+2. Create Restaurant
+3. Create Menu Item
+4. View Restaurants
+5. Place Order
+6. View Orders
+7. Make Payment
+8. Exit
+Choose an option: 3
+Enter restaurant ID to add menu item: 2
+Enter menu item name: Chappathi
+Enter menu item price: 35.56
+Enter menu item description: North indian flat bread             
+Enter available quantity: 10
+Menu item created successfully!
+
+=== Welcome to the Online Food Delivery System ===
+1. Register Customer
+2. Create Restaurant
+3. Create Menu Item
+4. View Restaurants
+5. Place Order
+6. View Orders
+7. Make Payment
+8. Exit
+Choose an option: 3
+Enter restaurant ID to add menu item: 45
+Enter menu item name: Idly
+Enter menu item price: 34.45
+Enter menu item description: South
+Enter available quantity: 34
+Error: Restaurant ID 45 not found
+
+=== Welcome to the Online Food Delivery System ===
+1. Register Customer
+2. Create Restaurant
+3. Create Menu Item
+4. View Restaurants
+5. Place Order
+6. View Orders
+7. Make Payment
+8. Exit
+Choose an option: 3
+Enter restaurant ID to add menu item: 2
+Enter menu item name: Idly
+Enter menu item price: 34.45
+Enter menu item description: South Indian rice cake
+Enter available quantity: 34
+Menu item created successfully!
+
+=== Welcome to the Online Food Delivery System ===
+1. Register Customer
+2. Create Restaurant
+3. Create Menu Item
+4. View Restaurants
+5. Place Order
+6. View Orders
+7. Make Payment
+8. Exit
+Choose an option: 4
+
+=== List of Restaurants ===
+Restaurant ID: 2
+Name: Le Meridian
+Address: Covai
+Cuisine Type: Continental
+Contact Number: 7895649876
+
+
+=== Welcome to the Online Food Delivery System ===
+1. Register Customer
+2. Create Restaurant
+3. Create Menu Item
+4. View Restaurants
+5. Place Order
+6. View Orders
+7. Make Payment
+8. Exit
+Choose an option: 5
+Enter customer ID: 12
+Enter restaurant ID to place order: 2
+
+ Menu Items
+Item ID: 2
+Name: Chappathi
+Price: 35.56
+Description: 
+Available Quantity: 10
+
+Item ID: 3
+Name: Idly
+Price: 34.45
+Description: South Indian rice cake
+Available Quantity: 34
+
+Enter menu item ID to order: 2
+Enter quantity: 3
+Enter delivery address: Peelamedu covai
+Order placed successfully!
+
+=== Welcome to the Online Food Delivery System ===
+1. Register Customer
+2. Create Restaurant
+3. Create Menu Item
+4. View Restaurants
+5. Place Order
+6. View Orders
+7. Make Payment
+8. Exit
+Choose an option: 5
+Enter customer ID: 12
+Enter restaurant ID to place order: 69
+No menu items available for this restaurant.
+
+=== Welcome to the Online Food Delivery System ===
+1. Register Customer
+2. Create Restaurant
+3. Create Menu Item
+4. View Restaurants
+5. Place Order
+6. View Orders
+7. Make Payment
+8. Exit
+Choose an option: 6
+Enter customer ID to view orders: 12
+
+=== List of Orders ===
+Order ID: 655
+Restaurant ID: 2
+Total Price: 106.68
+Order Status: Pending
+Delivery Address: Peelamedu covai
+
+
+=== Welcome to the Online Food Delivery System ===
+1. Register Customer
+2. Create Restaurant
+3. Create Menu Item
+4. View Restaurants
+5. Place Order
+6. View Orders
+7. Make Payment
+8. Exit
+Choose an option: 6
+Enter customer ID to view orders: 99
+No orders found for this customer.
+
+=== Welcome to the Online Food Delivery System ===
+1. Register Customer
+2. Create Restaurant
+3. Create Menu Item
+4. View Restaurants
+5. Place Order
+6. View Orders
+7. Make Payment
+8. Exit
+Choose an option: 7
+Enter order ID to make payment: 655
+Enter amount to pay: 106.68
+Payment successful! Order is now confirmed.
+
+=== Welcome to the Online Food Delivery System ===
+1. Register Customer
+2. Create Restaurant
+3. Create Menu Item
+4. View Restaurants
+5. Place Order
+6. View Orders
+7. Make Payment
+8. Exit
+Choose an option: 7
+Enter order ID to make payment: 655
+Enter amount to pay: 106.69
+Invalid amount. Expected: 106.68
+
+=== Welcome to the Online Food Delivery System ===
+1. Register Customer
+2. Create Restaurant
+3. Create Menu Item
+4. View Restaurants
+5. Place Order
+6. View Orders
+7. Make Payment
+8. Exit
+Choose an option: 8
+Exiting...
